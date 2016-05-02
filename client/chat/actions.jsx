@@ -1,24 +1,10 @@
-import { UPVOTE, DOWNVOTE, QUESTION } from './constants';
 
-export function upvote(id,username) {  
-  return {
-    type: UPVOTE,
-    id: id,
-    username: username
-  };
-}
+import { CHAT_MESSAGE } from './constants';
 
-export function downvote(question_id) {
-  return {
-    type: DOWNVOTE,
-    question_id: question_id
-  }
-}
-
-export function submitQuestion(question) {
+export function submitChat(chatMessage) {
     
   return {
-    type: QUESTION,
-    question: question,
+    type: CHAT_MESSAGE,
+    chatMessage: chatMessage,
   }
 }

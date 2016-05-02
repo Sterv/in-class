@@ -13,6 +13,10 @@ import axios from 'axios';
 import QuizContainer from '../quiz/container';
 import StudentQuiz from '../quiz/StudentQuiz';
 import TeacherQuiz from '../quiz/TeacherQuiz';
+<<<<<<< HEAD
+=======
+import ChatContainer from '../chat/container';
+>>>>>>> addQuestions
 
 export const SERVER_URL = process.env.NODE_ENV === 'production' ? 'https://in-class.herokuapp.com/authentication' : 'http://localhost:8000/authentication' ; 
 
@@ -60,5 +64,11 @@ export default (
       <Route path="/send-quiz"
            component={TeacherQuiz} />
            onEnter={checkAuthentication}/>
+<<<<<<< HEAD
+=======
+      <Route path="/chat"
+           component={ChatContainer} />
+           onEnter={checkAuthentication}/>     
+>>>>>>> addQuestions
   </Route>
 );

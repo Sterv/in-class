@@ -5,7 +5,12 @@ export function initializeWebSockets() {
   socket.on('question-submitted', data => {
     this.props.actions.submitQuestion(data.question);
   });
+<<<<<<< HEAD
   socket.on('questionWithID', data => {
+=======
+
+  socket.on('question-returned-with-id', data => {
+>>>>>>> addQuestions
     this.props.actions.submitQuestion(data.question);
   });
   socket.on('upvote', data => {    
@@ -13,10 +18,10 @@ export function initializeWebSockets() {
   });
 };
 
-export function emitNewQuestion(event,name){
+export function emitNewQuestion(text,name){
   socket.emit('question-submitted', {
       username : name,
-      text: event.target.value,
+      text: text,
       timestamp: Date.now(),
       upvotes: [],
     });

@@ -12,8 +12,11 @@ class QuestionContainer extends Component {
  render() {
    return (
      <div>
+<<<<<<< HEAD
       <span><h1>In class...</h1></span>
       <Login />
+=======
+>>>>>>> addQuestions
       <QuestionBox />
     </div>
    );
